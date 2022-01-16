@@ -1,8 +1,10 @@
+import axios from 'axios'
 import Head from 'next/head'
 import Header from '../components/Header'
 import Nav from '../components/Nav'
-
-export default function Home() {
+import genres from '../utils/fetch'
+export default function Home({ movies }) {
+  console.log(movies)
   return (
     <div className="h-screen">
 
@@ -18,4 +20,24 @@ export default function Home() {
       </div>
     </div>
   )
+}
+
+export async function getServerSideProps(context) {
+  const genre = context.query.genre || genres[0].id
+  const currentGenre = genres.find(g => g.id === genre)
+  const baseUrl = 'https://api.themoviedb.org/3'
+  const props = {}
+
+  try {
+    const res = await axios.get(`${baseUrl}${currentGenre.endpoint}`)
+    console.log(res)
+    props.movies = res.data.results
+  } catch (error) {
+    console.log(error)
+    props.movies = []
+  }
+
+  return {
+    props
+  }
 }
