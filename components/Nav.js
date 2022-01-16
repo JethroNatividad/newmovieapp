@@ -11,11 +11,11 @@ const Nav = () => {
         const genre = router.query.genre
         setCurrentGenre(genre)
 
-    }, [])
+    }, [router.query.genre])
 
     const handleNavClick = (id) => {
+        console.log(navItems)
         router.push(`/?genre=${id}`)
-        setCurrentGenre(id)
     }
 
     return (
