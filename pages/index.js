@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Header from '../components/Header'
+import Nav from '../components/Nav'
 
 export default function Home() {
   return (
@@ -12,6 +13,7 @@ export default function Home() {
       </Head>
       <div className="h-full bg-bluish text-gray-300">
         <Header />
+        <Nav />
 
       </div>
     </div>
