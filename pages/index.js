@@ -1,6 +1,7 @@
 import axios from 'axios'
 import Head from 'next/head'
 import Header from '../components/Header'
+import MoviesList from '../components/MoviesList'
 import Nav from '../components/Nav'
 import genres from '../utils/fetch'
 export default function Home({ movies }) {
@@ -16,6 +17,7 @@ export default function Home({ movies }) {
       <div className="h-full bg-bluish text-gray-300">
         <Header />
         <Nav />
+        <MoviesList />
 
       </div>
     </div>
