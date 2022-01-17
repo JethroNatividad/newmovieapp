@@ -1,7 +1,7 @@
 module.exports = {
   reactStrictMode: true,
   images: {
-    domains: ['www.hulu.com', 'links.papareact.com'],
+    domains: ['www.hulu.com', 'links.papareact.com', 'image.tmdb.org'],
   },
 
 }

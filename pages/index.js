@@ -17,7 +17,7 @@ export default function Home({ movies }) {
       <div className="h-full bg-bluish text-gray-300">
         <Header />
         <Nav />
-        <MoviesList />
+        <MoviesList movies={movies} />
 
       </div>
     </div>
