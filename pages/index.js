@@ -7,7 +7,7 @@ import genres from '../utils/fetch'
 export default function Home({ movies }) {
   console.log(movies)
   return (
-    <div className="h-screen">
+    <div className="min-h-screen">
 
       <Head>
         <title>Hulu clone idk</title>
