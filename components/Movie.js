@@ -4,7 +4,7 @@ import React from 'react'
 
 const Movie = ({ movie }) => {
     return (
-        <div className='p-2 group sm:hover:scale-105 transition-all duration-300 cursor-pointer m-2 shadow-lg hover:shadow-black'>
+        <div className='p-2 drop-shadow-2xl group sm:hover:scale-105 transition-all duration-300 cursor-pointer m-2 shadow-lg hover:shadow-black'>
             <Image className='rounded-sm' layout='responsive' src={`https://image.tmdb.org/t/p/original${movie.backdrop_path || movie.poster_path}`} height={1080} width={1920} alt={movie.title} />
             <div className='p-1'>
                 <h1 className='text-2xl font-bold mb-2'>{movie.title || movie.original_name}</h1>
