@@ -7,6 +7,9 @@ module.exports = {
     extend: {
       colors: {
         'bluish': '#06202A'
+      },
+      screens: {
+        '3xl': '2000px',
       }
     },
   },
